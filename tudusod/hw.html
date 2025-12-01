@@ -1,0 +1,93 @@
+<head>
+<h1>find min</h1>
+
+<input id="a">
+<input id="b">
+<input id="c">
+<input id="d">
+<button onclick="lmin()">min</button>
+
+<h1>check prime number</h1>
+
+<input id="p">
+<button onclick="prime()">prime number</button>
+</head>
+
+<body>
+<script>
+function lmin() {
+
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    let d = document.getElementById("d").value;
+
+    if(a=="" || b=="" || c=="" || d==""){
+        alert("4 too oruul");
+        document.getElementById("a").value="";
+        document.getElementById("b").value="";
+        document.getElementById("c").value="";
+        document.getElementById("d").value="";
+        return;
+    }
+
+    a = Number(a);
+    b = Number(b);
+    c = Number(c);
+    d = Number(d);
+
+    let min = a;
+
+    if(b < min){
+        min = b;
+    }
+    if(c < min){
+        min = c;
+    }
+    if(d < min){
+        min = d;
+    }
+
+    alert("min=" + min);
+
+    document.getElementById("a").value="";
+    document.getElementById("b").value="";
+    document.getElementById("c").value="";
+    document.getElementById("d").value="";
+}
+
+function prime() {
+
+    let num = document.getElementById("p").value;
+
+    if(num==""){
+        alert("too oruulna uu");
+        document.getElementById("p").value="";
+        return;
+    }
+
+    num = Number(num);
+
+    let ok = true;
+
+    if(num < 2){
+        ok = false;
+    }
+
+    for(let i=2; i<num; i++){
+        if(num % i == 0){
+            ok = false;
+        }
+    }
+
+    if(ok==true){
+        alert("prime");
+    } else {
+        alert("not prime");
+    }
+
+    document.getElementById("p").value="";
+}
+
+</script>
+</body>

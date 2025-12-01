@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt("1st number: "));
+let b = Number(prompt("2nd number: "));
+let c = Number(prompt("3rd number: "));
+
+
+function sum (a, b, c){
+    return a + b + c;
+}
+function avg (sum){
+    return sum / 3;
+}
+function max(a, b, c){
+  if (a > b && a > c) {
+    return a;
+  } else if (b > a && b > c) {
+    return b;
+  } else {
+    return c;
+  }
+}
+
+console.log("sum =", sum(a,b,c));
+console.log("avg =", avg(a,b,c)); 
+console.log("max =", max(a, b, c)); 
+    </script>
+</body>
+</html>
