@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<input type="text" id="a">
+<input type="text" id="b">
+<input type="text" id="c">
+<input type="text" id="d">
+<button onclick="baga()">hamgiin baga toog shalgah</button>
+<input type="text" id="p">
+<button onclick="anhnii()">anhnii too mun eseh shalgah</button>
+<script>
+let a = document.getElementById("a");
+let b = document.getElementById("b");
+let c = document.getElementById("c");
+let d = document.getElementById("d");
+if (a.value == "", b.value == "", c.value == "", d.value == ""){
+alert("ta toogoo buren oruulna uu!");
+return false;
+}
+return true;
+function baga(){
+if (!inputshalgah()) return;
+
+let ih1, ih2;
+if (Number(a.value) < Number(b.value)) {
+ih1 = Number(a.value);
+}else {
+ih1 = Number(b.value);
+}
+if (Number(c.value) < Number(d.value)) {
+ih2 = Number(c.value);
+}else {
+ih2 = Number(d.value);
+}
+if (ih1 < ih2) {
+console.log("Hamgiin baga ",ih1);
+}else {
+console.log("Hamgiin baga ",ih2);
+}
+}
+function tegshniilber() {
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+if (i % 2 == 0) {
+sum += i;
+}
+}
+console.log("1-10hurtleh tegs toonii niilber:", sum);
+return sum;
+}
+function tegshtoo() {
+let evens = [];
+for (let i = 1; i <= 10; i++) {
+if (i % 2 === 0) {
+evens.push(i);
+}
+}
+console.log("1-10hurtlh tegsh too:", evens);
+return evens;
+}
+function sondgoitoo() {
+let odds = [];
+for (let i = 11; i <= 20; i++) {
+if (i % 2 === 1) {
+odds.push(i);
+}
+}
+console.log("11-20hurtleh sondgoi too:", odds);
+return odds;
+}
+tegshniilber();
+sondgoitoo();
+tegshtoo();
+
+function anhnii() {
+if(!anhniitooshalgah()) return;
+
+let p = document.getElementById("p");
+let P = Number(p.value);
+let w;
+for (let i = 2; i < P; i++) {
+if (P % i == 0) {
+console.log(P, "anhnii too bish bn");
+w = 1;
+break;
+}
+}
+if (w == undefined) {
+console.log(P, "anhnii too mun")
+}
+
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
