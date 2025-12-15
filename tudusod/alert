@@ -1,0 +1,43 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+     <input type="number" placeholder="first number" id="a">
+     <input type="number" placeholder="second number" id="b">
+     <input type="number" placeholder="third number" id="c">
+     <input type="number" placeholder="fourth number" id="d">
+     <button onclick="sum()">+</button>
+     <input type="number" disabled placeholder="answer" id="answer">
+    <script>
+    function sum(){
+       
+        let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let c = Number(document.getElementById("c").value);
+    let d = Number(document.getElementById("d").value);
+    if(a === 0 || b === 0 || c === 0 || d === 0){
+            alert("0 bj bolku gng");
+            return;
+        }
+
+    let answer =a+b+c+d;
+
+     
+    document.getElementById("answer").value = answer;
+    document.getElementById("a").value = "";
+    document.getElementById("b").value = "";
+    document.getElementById("c").value = "";
+    document.getElementById("d").value = "";
+   
+
+    }
+
+
+    </script>
+</body>
+</html>
